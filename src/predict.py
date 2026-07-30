@@ -1,3 +1,4 @@
+import os
 import joblib
 
 from preprocess import preprocess_text
@@ -7,9 +8,12 @@ from guidance import get_guidance
 # Load Model, Vectorizer and Keyword Database
 # ==========================================================
 
-MODEL_PATH = "models/disaster_model.pkl"
-VECTORIZER_PATH = "models/vectorizer.pkl"
-KEYWORD_PATH = "models/keyword_set.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODELS_DIR = os.path.join(BASE_DIR, "..", "models")
+
+MODEL_PATH = os.path.join(MODELS_DIR, "disaster_model.pkl")
+VECTORIZER_PATH = os.path.join(MODELS_DIR, "vectorizer.pkl")
+KEYWORD_PATH = os.path.join(MODELS_DIR, "keyword_set.pkl")
 
 model = joblib.load(MODEL_PATH)
 vectorizer = joblib.load(VECTORIZER_PATH)
@@ -114,10 +118,8 @@ if __name__ == "__main__":
         category, confidence, guidance = predict_and_guide(message)
 
         print("\nPredicted Disaster :", category)
-
         print("Confidence :", str(confidence) + "%")
 
         print("\nSafety Guidance")
         print("-" * 45)
-
         print(guidance)
