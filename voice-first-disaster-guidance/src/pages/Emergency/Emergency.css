@@ -1,0 +1,149 @@
+.emergency-page{
+    padding:40px;
+    background:#eef5fb;
+    min-height:100vh;
+}
+
+.emergency-header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.emergency-header h1{
+    font-size:42px;
+    color:#0B4F8C;
+    margin-bottom:15px;
+}
+
+.emergency-header p{
+    font-size:18px;
+    color:#666;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.contact-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.contact-card h2{
+    color:#0B4F8C;
+    margin-bottom:10px;
+}
+
+.contact-card h1{
+    font-size:42px;
+    color:#D32F2F;
+    margin-bottom:20px;
+}
+
+.call-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#1565C0;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.call-btn:hover{
+    background:#0B4F8C;
+}
+
+.checklist{
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin-bottom:40px;
+}
+
+.checklist h2{
+    color:#0B4F8C;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.checklist ul{
+    padding-left:25px;
+}
+
+.checklist li{
+    font-size:18px;
+    margin-bottom:15px;
+}
+
+.hospital-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.hospital-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.hospital-icon{
+    font-size:60px;
+    color:#1565C0;
+}
+
+.hospital-header h2{
+    color:#0B4F8C;
+    margin-bottom:8px;
+}
+
+.hospital-header p{
+    color:#666;
+}
+
+iframe{
+    width:100%;
+    border:none;
+}
+
+@media(max-width:768px){
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.hospital-header{
+    flex-direction:column;
+    text-align:center;
+}
+
+}

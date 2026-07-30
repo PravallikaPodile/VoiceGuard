@@ -1,0 +1,40 @@
+.footer{
+    background:#0B4F8C;
+    color:white;
+    margin-top:50px;
+}
+
+.footer-container{
+    width:90%;
+    margin:auto;
+    padding:40px 0;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer h2,
+.footer h3{
+    margin-bottom:15px;
+}
+
+.footer p{
+    line-height:28px;
+    color:#f1f1f1;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:18px;
+    background:#083869;
+    font-size:15px;
+}
+
+@media(max-width:900px){
+
+.footer-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+}
