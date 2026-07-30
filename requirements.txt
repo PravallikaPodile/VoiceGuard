@@ -1,0 +1,15 @@
+Flask
+Flask-Cors
+scikit-learn
+joblib
+nltk
+numpy
+scipy
+threadpoolctl
+regex
+click
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+gunicorn
