@@ -40,11 +40,11 @@ function Report() {
       setIsAnalyzing(true);
 
       const response = await axios.post(
-        "http://127.0.0.1:5000/predict",
-        {
-          text: text,
-        }
-      );
+  `${API_URL}/predict`,
+  {
+    text: text,
+  }
+);
 
       const data = response.data;
 
