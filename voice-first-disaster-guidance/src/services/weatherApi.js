@@ -1,11 +1,22 @@
 import axios from "axios";
 
+// Weather API Key from .env
 const API_KEY = import.meta.env.VITE_WEATHER_API_KEY;
 
 const CURRENT_URL = "https://api.openweathermap.org/data/2.5/weather";
 const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast";
 
-// Current weather by city
+// Check if API key exists
+if (!API_KEY) {
+  console.error(
+    "Missing VITE_WEATHER_API_KEY. Please add it to your .env file (local) and Render Environment Variables."
+  );
+}
+
+// =======================================
+// Current Weather by City
+// =======================================
+
 export const getWeatherByCity = async (city) => {
   try {
     const response = await axios.get(CURRENT_URL, {
@@ -23,7 +34,10 @@ export const getWeatherByCity = async (city) => {
   }
 };
 
-// Current weather by location
+// =======================================
+// Current Weather by Coordinates
+// =======================================
+
 export const getWeatherByLocation = async (lat, lon) => {
   try {
     const response = await axios.get(CURRENT_URL, {
@@ -42,7 +56,10 @@ export const getWeatherByLocation = async (lat, lon) => {
   }
 };
 
-// 5-Day Forecast by city
+// =======================================
+// 5-Day Forecast by City
+// =======================================
+
 export const getForecastByCity = async (city) => {
   try {
     const response = await axios.get(FORECAST_URL, {
@@ -60,7 +77,10 @@ export const getForecastByCity = async (city) => {
   }
 };
 
-// 5-Day Forecast by current location
+// =======================================
+// 5-Day Forecast by Coordinates
+// =======================================
+
 export const getForecastByLocation = async (lat, lon) => {
   try {
     const response = await axios.get(FORECAST_URL, {
