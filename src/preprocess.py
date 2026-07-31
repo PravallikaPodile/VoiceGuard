@@ -1,4 +1,26 @@
 import re
+import nltk
+
+# Download required NLTK resources if missing
+try:
+    nltk.data.find("corpora/stopwords")
+except LookupError:
+    nltk.download("stopwords")
+
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
+
+try:
+    nltk.data.find("corpora/wordnet")
+except LookupError:
+    nltk.download("wordnet")
+
+try:
+    nltk.data.find("corpora/omw-1.4")
+except LookupError:
+    nltk.download("omw-1.4")
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -24,5 +46,6 @@ def preprocess_text(text):
 
 if __name__ == "__main__":
     sample = "Smoke is coming from the Kitchen!!"
+
     print("Original :", sample)
     print("Processed:", preprocess_text(sample))
